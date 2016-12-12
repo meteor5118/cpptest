@@ -17,6 +17,7 @@ extern void test_merge_two_ascend_lists_to_descend_list();
 extern void test_is_connected();
 
 int main() {
+    // test
     test_is_connected();
     
     return 0;
