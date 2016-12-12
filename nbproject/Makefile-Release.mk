@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/is_connected_node_in_binary_tree.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/merge_two_sorted_lists_2.o
+	${OBJECTDIR}/aads/is_connected_node_in_binary_tree.o \
+	${OBJECTDIR}/aads/merge_two_sorted_lists_2.o \
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -64,20 +64,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cpptest: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cpptest ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/is_connected_node_in_binary_tree.o: is_connected_node_in_binary_tree.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/aads/is_connected_node_in_binary_tree.o: aads/is_connected_node_in_binary_tree.cpp
+	${MKDIR} -p ${OBJECTDIR}/aads
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/is_connected_node_in_binary_tree.o is_connected_node_in_binary_tree.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/aads/is_connected_node_in_binary_tree.o aads/is_connected_node_in_binary_tree.cpp
+
+${OBJECTDIR}/aads/merge_two_sorted_lists_2.o: aads/merge_two_sorted_lists_2.cpp
+	${MKDIR} -p ${OBJECTDIR}/aads
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/aads/merge_two_sorted_lists_2.o aads/merge_two_sorted_lists_2.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/merge_two_sorted_lists_2.o: merge_two_sorted_lists_2.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/merge_two_sorted_lists_2.o merge_two_sorted_lists_2.cpp
 
 # Subprojects
 .build-subprojects:
